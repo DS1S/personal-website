@@ -1,0 +1,41 @@
+.projectsContainer {
+    background-color: var(--main-color);
+    margin-top: 8rem;
+}
+
+.projectsTitle {
+    margin: 0;
+    padding: 2rem 0 1rem;
+}
+
+.projectsText {
+    color: white;
+}
+
+.projectsDescription {
+    margin: auto;
+    text-align: center;
+}
+
+.projectCardsContainer {
+    padding: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buffer {
+    margin: 0.5rem;
+    width: 30%;
+    height: 500px;
+}
+
+@media (max-width: 768px) {
+    .projectCardsContainer {
+        justify-content: center;
+    }
+
+    .buffer {
+        display: none;
+    }
+}

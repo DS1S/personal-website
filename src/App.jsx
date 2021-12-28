@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Hero from "./components/Hero/Hero";
 import NavBar from "./components/Navbar/Navbar";
 import Experience from "./components/Experience/Experience";
+import Projects from './components/Projects/Projects';
 
 library.add(fab, faGithub, faLinkedin, faEnvelope)
 
@@ -19,6 +20,7 @@ function App() {
       <NavBar />
       <Hero />
       <Experience />
+      <Projects />
     </div>
   );
 }

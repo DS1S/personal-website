@@ -1,0 +1,12 @@
+.projectCardContainer {
+    background-color: white;
+    margin: 0.5rem;
+    width: 30%;
+    height: 500px;
+}
+
+@media (max-width: 768px) {
+    .projectCardContainer {
+        width: 75%;
+    }
+}
