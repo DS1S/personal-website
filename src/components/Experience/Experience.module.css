@@ -15,3 +15,17 @@
     cursor: pointer;
     user-select: none;
 }
+
+.slider {
+    margin: 0 20% 16rem;
+}
+
+@media (max-width: 768px) {
+    .timelineContainer {
+        width: 90%;
+    }
+
+    .slider {
+        margin: 0 0 16rem;
+    }
+}

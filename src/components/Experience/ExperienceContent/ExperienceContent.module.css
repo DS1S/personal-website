@@ -1,0 +1,19 @@
+.experienceContentContainer {
+    display: flex;
+}
+
+.companyImg {
+    display: block;
+    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+}
+
+.experienceContentContainer > div {
+    margin-right: 2rem;
+}
+
+.descriptionBullet {
+    margin-bottom: 1rem;
+}
