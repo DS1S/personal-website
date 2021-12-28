@@ -1,0 +1,91 @@
+
+.navbarContainer {
+    background-color: var(--main-color);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: sticky;
+    height: var(--navbar-height);
+}
+
+.linkContainer {
+    display: flex;
+    transition: max-height 500ms ease-in-out;
+}
+
+.navLink {
+    font-size: 1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0.25rem 0;
+    color: white;
+    padding: 1rem 2rem;
+    border-width: 0;
+    border-style: solid;
+    border-color: aqua;
+    transition: border-bottom-width 150ms linear, color 300ms linear;
+}
+
+
+.navLink:hover {
+    cursor: pointer;
+    color: aqua;
+    border-bottom-width: 0.25rem;
+}
+
+.activeLink {
+    color: aqua;
+    border-style: solid;
+    border-color: aqua;
+    border-bottom-width: 0.25rem;
+}
+
+.hamburgerMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    align-self: flex-end;
+}
+
+
+.hamburgerMenu:hover .hamburgerLayer {
+    background-color: aqua;
+}
+
+
+.hamburgerLayer {
+    width: 1.5rem;
+    margin-bottom: 4px;
+    height: 0.25rem;
+    background-color: white;
+    align-content: center;
+    transition: background-color 200ms linear;
+}
+
+
+.linkMenuOpen {
+    height: 400px;
+    display: flex;
+}
+
+
+@media (max-width: 768px) {
+    .navbarContainer {
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .hamburgerMenu {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .linkContainer {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+}
