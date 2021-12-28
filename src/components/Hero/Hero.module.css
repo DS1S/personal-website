@@ -7,6 +7,7 @@
     color: white;
     align-self: center;
     user-select: none;
+    text-align: justify;
     padding: 1rem 6rem 1rem 0;
 }
 
@@ -23,9 +24,29 @@
     color: aqua;
 }
 
-.avatar {
+.avatarContainer {
     width: 50%;
     flex-shrink: 0;
+    position: relative;
+}
+
+.avatar {
+    width: 100%;
+    flex-shrink: 0;
     height: 500px;
+}
+
+
+.socialsContainer {
+    display: flex;
+}
+
+.socialIcon{
+    padding: 1rem;
     cursor: pointer;
+    transition: color 300ms ease-in-out;
+}
+
+.socialIcon:hover {
+    color: aqua;
 }

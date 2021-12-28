@@ -22,6 +22,7 @@
     border-width: 0;
     border-style: solid;
     border-color: aqua;
+    user-select: none;
     transition: border-bottom-width 150ms linear, color 300ms linear;
 }
 

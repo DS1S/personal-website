@@ -4,7 +4,7 @@ import NavbarLinks from './NavbarLinks/NavbarLinks';
 
 export default function NavBar() {
 	const defaultActiveLinks = [ false, false, false, false ];
-	const links = [ 'Profile', 'Experience', 'Projects', 'Contact' ];
+	const links = [ 'Profile', 'Experience', 'Projects', 'Resume' ];
 
 	const [ activeLinks, setActiveLinks ] = useState(defaultActiveLinks);
 	const [ showMenu, setShowMenu ] = useState(false);
