@@ -16,7 +16,7 @@ export default function Projects() {
 			<h2 className={`section-title ${styles.projectsText} ${styles.projectsTitle}`}>Projects</h2>
 			<p className={`${styles.projectsText} ${styles.projectsDescription}`}>
 				A currated list of notable projects I have worked most recently. Majority relate to full-stack web
-				development or software architecutre.
+				development or software architecutre. (Some github links may not be available as they are privated repos... working on publicizing them, demos are available however).
 			</p>
 			<div className={styles.projectCardsContainer} >
 				{projectsData.map((data, index) => (
