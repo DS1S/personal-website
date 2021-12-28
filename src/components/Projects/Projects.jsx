@@ -12,7 +12,7 @@ export default function Projects() {
 	}
 
 	return (
-		<div className={styles.projectsContainer}>
+		<div className={styles.projectsContainer} id='projects'>
 			<h2 className={`section-title ${styles.projectsText} ${styles.projectsTitle}`}>Projects</h2>
 			<p className={`${styles.projectsText} ${styles.projectsDescription}`}>
 				A currated list of notable projects I have worked most recently. Majority relate to full-stack web

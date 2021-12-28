@@ -1,7 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AOS from 'aos';
 
 import 'rc-steps/assets/index.css';
@@ -20,20 +19,11 @@ AOS.init({startEvent: 'load'});
 
 function App() {
 	return (
-		<div>
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <NavBar />
-            <Hero />
-            <Experience />
-            <Projects />
-          </Route>
-          <Route path="/profile" component={Hero} />
-          <Route path="/experience" component={Experience} />
-          <Route path="/projects" component={Projects} />
-        </Switch>
-      </Router>
+		<div id='profile'>
+      <NavBar />
+      <Hero />
+      <Experience />
+      <Projects />
 		</div>
 	);
 }

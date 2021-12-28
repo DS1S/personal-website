@@ -71,7 +71,7 @@ export default function Experience() {
 	};
 
 	return (
-		<div className={styles.experienceContainer}>
+		<div className={styles.experienceContainer} id='experience'>
 			<h2 className="section-title">Intern Experience</h2>
 			<div
 				data-aos="fade-right"
