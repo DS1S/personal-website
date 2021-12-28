@@ -11,7 +11,7 @@ export default function ProjectCard(props) {
 			<p>{props.description}</p>
 			<div className={styles.linksContainer}>
 				{props.hasDemo && <a href={props.demoLink}><p>Demo</p></a>}
-				<a href={props.githubLink}><p>Github</p></a>
+				{props.githubLink && <a href={props.githubLink}><p>Github</p></a>}
 			</div>
 		</div>
 	);

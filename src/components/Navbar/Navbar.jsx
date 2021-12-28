@@ -37,6 +37,7 @@ export default function NavBar() {
 					links={links}
 					toggleable={true}
 					handleLinkClick={handleLinkClick}
+					handleHamburgerClick={handleHamburgerClick}
 				/>
 			</div>
 			<NavbarLinks
@@ -47,6 +48,7 @@ export default function NavBar() {
 				toggleable={false}
 				refs={refs}
 				handleLinkClick={handleLinkClick}
+				handleHamburgerClick={handleHamburgerClick}
 			/>
 		</div>
 	);

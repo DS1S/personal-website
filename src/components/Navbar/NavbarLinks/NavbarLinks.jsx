@@ -1,6 +1,5 @@
 import { uid } from 'react-uid';
 
-
 export default function NavbarLinks(props) {
 	const openStyle = props.toggleable && props.showMenu ? { display: 'flex', maxHeight: '500px' } : {};
 
@@ -8,12 +7,15 @@ export default function NavbarLinks(props) {
 		<div className={props.styles.linkContainer} style={openStyle} hidden={!props.showMenu}>
 			{props.links.map((val, index) => {
 				return (
-					<a href={props.refs[index]} key={uid(val)} style={{textDecoration: 'none'}}>
+					<a href={props.refs[index]} key={uid(val)} style={{ textDecoration: 'none' }}>
 						<p
 							className={`${props.styles.navLink} ${props.activeLinks[index]
 								? props.styles.activeLink
 								: ''}`}
-							onClick={(e) => props.handleLinkClick(index)}
+							onClick={(e) => {
+								props.handleLinkClick(index);
+								props.handleHamburgerClick();
+							}}
 						>
 							{val}
 						</p>
