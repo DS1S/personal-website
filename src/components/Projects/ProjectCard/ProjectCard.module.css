@@ -45,6 +45,8 @@
 .linksContainer > * {
     cursor: pointer;
     padding-right: 1rem;
+    text-decoration: none;
+    color: black;
 }
 
 .linksContainer > *:hover {

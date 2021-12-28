@@ -8,7 +8,7 @@ export default function Projects() {
 
 	const bufferElements = []
 	for (let i = 0; i < (projectsData.length % 4); i++) {
-		bufferElements.push(<div className={styles.buffer}></div>)			
+		bufferElements.push(<div className={styles.buffer} key={uid(i + projectsData.length + 1)}></div>)			
 	}
 
 	return (

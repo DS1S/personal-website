@@ -6,6 +6,10 @@
   --navbar-height: 64px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Barlow Semi Condensed', sans-serif;

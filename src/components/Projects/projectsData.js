@@ -48,6 +48,6 @@ export const projectsData = [
         technologies: 'Java',
         description: 'Some description',
         hasDemo: false,
-        githubLink: ''
+        githubLink: 'https://github.com/DS1S/techconference-app'
     }
 ];

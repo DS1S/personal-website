@@ -10,8 +10,8 @@ export default function ProjectCard(props) {
 			<h4 className={styles.technologies}>{props.technologies}</h4>
 			<p>{props.description}</p>
 			<div className={styles.linksContainer}>
-				<p>Demo</p>
-				<p>Github</p>
+				{props.hasDemo && <a href={props.demoLink}><p>Demo</p></a>}
+				<a href={props.githubLink}><p>Github</p></a>
 			</div>
 		</div>
 	);

@@ -73,7 +73,15 @@ export default function Experience() {
 	return (
 		<div className={styles.experienceContainer}>
 			<h2 className="section-title">Intern Experience</h2>
-			<div className={styles.timelineContainer}>
+			<div
+				data-aos="fade-right"
+				data-aos-offset="150"
+				data-aos-duration="750"
+				data-aos-easing="ease-in-out"
+				data-aos-once="false"
+				data-aos-anchor-placement="top-bottom"
+				className={styles.timelineContainer}
+			>
 				<Steps current={currentStep} type="navigation">
 					{Object.values(stepsData).map((jobInfo, index) => (
 						<Step
@@ -87,7 +95,14 @@ export default function Experience() {
 					))}
 				</Steps>
 			</div>
-			<div className={styles.slider}>
+			<div
+				data-aos="fade-up"
+				data-aos-duration="750"
+				data-aos-easing="ease-in-out"
+				data-aos-once="false"
+				data-aos-anchor-placement="top-bottom"
+				className={styles.slider}
+			>
 				<Slider ref={sliderRef} {...settings}>
 					{Object.values(stepsData).map((jobInfo, index) => (
 						<div className={styles.experienceBlob} key={uid(index)}>
