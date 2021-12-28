@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import styles from './Navbar.module.css';
 import NavbarLinks from './NavbarLinks/NavbarLinks';
+import resume from '../../assets/documents/resume.pdf';
 
 export default function NavBar() {
 	const defaultActiveLinks = [ false, false, false, false ];
 	const links = [ 'Profile', 'Experience', 'Projects', 'Resume' ];
+	const refs = [ '#profile', '#experience', '#projects', resume];
 
 	const [ activeLinks, setActiveLinks ] = useState(defaultActiveLinks);
 	const [ showMenu, setShowMenu ] = useState(false);
@@ -27,22 +29,24 @@ export default function NavBar() {
 					<div className={styles.hamburgerLayer} />
 					<div className={styles.hamburgerLayer} />
 				</div>
-				<NavbarLinks 
-					styles={styles} 
-					showMenu={showMenu} 
+				<NavbarLinks
+					styles={styles}
+					showMenu={showMenu}
 					activeLinks={activeLinks}
+					refs={refs}
 					links={links}
 					toggleable={true}
 					handleLinkClick={handleLinkClick}
 				/>
 			</div>
-			<NavbarLinks 
-				styles={styles} 
-				showMenu={showMenu} 
+			<NavbarLinks
+				styles={styles}
+				showMenu={showMenu}
 				activeLinks={activeLinks}
 				links={links}
 				toggleable={false}
-				handleLinkClick={handleLinkClick} 
+				refs={refs}
+				handleLinkClick={handleLinkClick}
 			/>
 		</div>
 	);
