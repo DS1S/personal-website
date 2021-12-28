@@ -17,7 +17,8 @@ const stepsData = {
 		endDate: 'Aug 2020',
 		contentBlocks: [
 			'Lead proposal of automating firewall rule Staging and change record automation. Performed design and documentation of concept documents.',
-			'Lead development on a standalone web application using Flask to consume internal API gateways for automated firewall rule changes. Increased overall time efficiency and reduced time spent on tickets by analysts.'
+			'Lead development on a standalone web application using Flask to consume internal API gateways for automated firewall rule changes.',
+			'Increased overall time efficiency and reduced time spent on tickets by analysts.'
 		],
 		imgSrc: rbcImg
 	},
@@ -58,7 +59,7 @@ export default function Experience() {
 		arrows: false,
 		beforeChange: (current, next) => {
 			setHasSlide(false);
-			setTimeout(setHasSlide(true), 470);
+			setTimeout(() => setHasSlide(true), 530);
 		}
 	};
 

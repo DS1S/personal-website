@@ -26,8 +26,7 @@
 
 .buffer {
     margin: 0.5rem;
-    width: 30%;
-    height: 500px;
+    width: 25%;
 }
 
 @media (max-width: 768px) {

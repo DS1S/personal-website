@@ -1,7 +1,14 @@
-export default [
+import synduceImg from "../../assets/images/projects/synduce.png";
+import bracketsImg from "../../assets/images/projects/brackets.png";
+import covidTrackerImg from "../../assets/images/projects/covid_tracker.png";
+import arrayItImg from "../../assets/images/projects/arrayit.png";
+import techConferenceImg from "../../assets/images/projects/techconf.png";
+
+
+export const projectsData = [
     {
         title: 'Synduce Web Client',
-        imgSrc: 'test',
+        imgSrc: synduceImg,
         technologies: 'React, AWS Lambda, AWS Gateway, GitHub Actions, Heroku',
         description: 'Some description',
         hasDemo: true,
@@ -10,8 +17,8 @@ export default [
     },
     {
         title: 'Brackets',
-        imgSrc: 'test',
-        technologies: 'React, AWS Lambda, AWS Gateway, GitHub Actions, Heroku',
+        imgSrc: bracketsImg,
+        technologies: 'React, Express, MongoDB, Heroku, GitHub Actions',
         description: 'Some description',
         hasDemo: true,
         demoLink: 'https://csc309-brackets.herokuapp.com/',
@@ -19,8 +26,8 @@ export default [
     },
     {
         title: 'ArrayIt.js',
-        imgSrc: 'test',
-        technologies: 'React, AWS Lambda, AWS Gateway, GitHub Actions, Heroku',
+        imgSrc: arrayItImg,
+        technologies: 'ES6 Javascript, Heroku',
         description: 'Some description',
         hasDemo: true,
         demoLink: 'https://pure-fortress-27269.herokuapp.com/',
@@ -28,8 +35,8 @@ export default [
     },
     {
         title: 'Covid API',
-        imgSrc: 'test',
-        technologies: 'React, AWS Lambda, AWS Gateway, GitHub Actions, Heroku',
+        imgSrc: covidTrackerImg,
+        technologies: 'Python, FastAPI, GitHub Actions, Heroku',
         description: 'Some description',
         hasDemo: true,
         demoLink: 'https://a2-covid-data-api.herokuapp.com/',
@@ -37,7 +44,7 @@ export default [
     },
     {
         title: 'Tech Conference',
-        imgSrc: 'test',
+        imgSrc: techConferenceImg,
         technologies: 'Java',
         description: 'Some description',
         hasDemo: false,
