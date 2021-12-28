@@ -1,13 +1,31 @@
-
 .heroContainer {
-
+    display: flex;
 }
 
-.heroBackground {
-    width: 100%;
-    z-index: -1;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+.heroIntroduction {
+    overflow: hidden;
+    color: white;
+    align-self: center;
+    user-select: none;
+    padding: 1rem 6rem 1rem 0;
+}
+
+.heroText {
+    font-size: 1.5rem;
+}
+
+.largeHeroText {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.highlightedText {
+    color: aqua;
+}
+
+.avatar {
+    width: 50%;
+    flex-shrink: 0;
+    height: 500px;
+    cursor: pointer;
 }

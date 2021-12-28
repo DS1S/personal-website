@@ -1,34 +1,47 @@
 import styles from './Hero.module.css';
+import HeroBackground from './HeroBackground/HeroBackground';
+import { BigHead } from '@bigheads/core';
+import { useState } from 'react';
 
 export default function Hero() {
+
+	const [ swapAvatar, setSwapAvatar ] = useState(false);
+
+
 	return (
 		<div className={styles.heroContainer}>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				version="1.1"
-				width="1440"
-				height="560"
-				preserveAspectRatio="none"
-				viewBox="0 0 1440 560"
-				className={styles.heroBackground}
-			>
-				<g mask="url(&quot;#SvgjsMask1001&quot;)" fill="none">
-					<rect width="1440" height="560" x="0" y="0" fill="rgba(15, 28, 48, 1)" />
-					<path
-						d="M0,474.876C95.782,489.976,203.947,496.489,282.883,440.174C361.249,384.265,379.582,277.955,405.836,185.339C428.772,104.429,450.253,19.107,424.979,-61.103C401.245,-136.426,329.373,-181.259,272.919,-236.485C221.392,-286.891,169.888,-332.22,108.769,-370.433C26.379,-421.945,-49.652,-507.453,-146.422,-498.669C-243.857,-489.824,-312.262,-400.031,-376.65,-326.369C-441.267,-252.445,-509.108,-172.218,-517.295,-74.376C-525.335,21.71,-473.16,111.363,-420.007,191.811C-372.634,263.51,-302.098,311.158,-230.835,359.186C-157.988,408.282,-86.775,461.196,0,474.876"
-						fill="#0c1626"
-					/>
-					<path
-						d="M1440 1020.063C1525.386 1008.1379999999999 1600.799 969.499 1675.444 926.358 1753.621 881.1759999999999 1852.068 847.2760000000001 1884.664 763.071 1917.137 679.183 1855.78 591.029 1839.497 502.561 1824.002 418.374 1839.215 326.538 1791.267 255.62599999999998 1741.007 181.29500000000002 1658.048 135.75 1572.716 108.00999999999999 1485.743 79.73700000000002 1393.49 77.81799999999998 1304.129 97.26600000000002 1209.962 117.75999999999999 1111.9 148.19299999999998 1049.729 221.82799999999997 987.826 295.145 982.087 397.24199999999996 970.437 492.48699999999997 959.012 585.888 950.1089999999999 680.558 982.826 768.784 1017.019 860.989 1071.942 951.241 1158.123 998.6089999999999 1242.41 1044.936 1344.746 1033.367 1440 1020.063"
-						fill="#12223a"
-					/>
-				</g>
-				<defs>
-					<mask id="SvgjsMask1001">
-						<rect width="1440" height="560" fill="#ffffff" />
-					</mask>
-				</defs>
-			</svg>
+			<HeroBackground />
+			<BigHead
+				className={styles.avatar}
+				onClick={() => setSwapAvatar(!swapAvatar)}
+				accessory={swapAvatar ? "shades" : "none"}
+				body="chest"
+				circleColor="blue"
+				clothing="shirt"
+				clothingColor="blue"
+				eyebrows="leftLowered"
+				eyes="happy"
+				faceMask={false}
+				faceMaskColor="green"
+				facialHair={swapAvatar ? "mediumBeard" : "none"}
+				graphic="react"
+				hair="short"
+				hairColor="brown"
+				hat="none4"
+				hatColor="black"
+				lashes={false}
+				lipColor="red"
+				mask
+				mouth="grin"
+				skinTone="light"
+			/>
+			<div className={styles.heroIntroduction}>
+				<p className={styles.heroText}>Hiya! I am</p>
+				<h3 className={styles.largeHeroText}>Daniel Saunders</h3>
+				<p className={styles.heroText}> 
+					a third-year computer science student at the University of Toronto.  I often do <span className={styles.highlightedText}>beep boop</span> stuff on occasion.  
+				</p>
+			</div>
 		</div>
 	);
 }
