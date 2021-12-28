@@ -1,9 +1,13 @@
-import Hero from "./components/Hero/Hero";
-import NavBar from "./components/Navbar/Navbar";
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+import 'rc-steps/assets/index.css';
+import 'rc-steps/assets/iconfont.css';
+
+import Hero from "./components/Hero/Hero";
+import NavBar from "./components/Navbar/Navbar";
+import Experience from "./components/Experience/Experience";
 
 library.add(fab, faGithub, faLinkedin, faEnvelope)
 
@@ -12,6 +16,7 @@ function App() {
     <div>
       <NavBar />
       <Hero />
+      <Experience />
     </div>
   );
 }

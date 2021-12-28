@@ -1,0 +1,17 @@
+.experienceContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.timelineContainer {
+    margin: 1rem 0 3rem;
+    align-self: center;
+    overflow: hidden;
+    width: 50%;
+    color: aqua;
+}
+
+.step {
+    cursor: pointer;
+    user-select: none;
+}

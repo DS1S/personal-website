@@ -5,9 +5,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Hero() {
-
 	const [ swapAvatar, setSwapAvatar ] = useState(false);
-
 
 	return (
 		<div className={styles.heroContainer}>
@@ -16,7 +14,7 @@ export default function Hero() {
 				<BigHead
 					className={styles.avatar}
 					onClick={() => setSwapAvatar(!swapAvatar)}
-					accessory={swapAvatar ? "shades" : "none"}
+					accessory={swapAvatar ? 'shades' : 'none'}
 					body="chest"
 					circleColor="blue"
 					clothing="shirt"
@@ -25,7 +23,7 @@ export default function Hero() {
 					eyes="happy"
 					faceMask={false}
 					faceMaskColor="green"
-					facialHair={swapAvatar ? "mediumBeard" : "none"}
+					facialHair={swapAvatar ? 'mediumBeard' : 'none'}
 					graphic="react"
 					hair="short"
 					hairColor="brown"
@@ -41,13 +39,20 @@ export default function Hero() {
 			<div className={styles.heroIntroduction}>
 				<p className={styles.heroText}>Hiya! I am</p>
 				<h3 className={styles.largeHeroText}>Daniel Saunders</h3>
-				<p className={styles.heroText}> 
-					a third-year computer science student at the University of Toronto.  I often do <span className={styles.highlightedText}>Beep Boop</span> stuff on my spare time.  
+				<p className={styles.heroText}>
+					a third-year computer science student at the University of Toronto. I often do{' '}
+					<span className={styles.highlightedText}>Beep Boop</span> stuff on my spare time.
 				</p>
 				<div className={styles.socialsContainer}>
-					<FontAwesomeIcon className={styles.socialIcon} size="3x" icon={["fab", "github"]}/>
-					<FontAwesomeIcon className={styles.socialIcon} size="3x" icon={["fab", "linkedin"]}/>
-					<FontAwesomeIcon className={styles.socialIcon} size="3x" icon={["fa", "envelope"]}/>
+					<a href="https://github.com/DS1S">
+						<FontAwesomeIcon className={styles.socialIcon} size="3x" icon={[ 'fab', 'github' ]} />
+					</a>
+					<a href="https://www.linkedin.com/in/daniel-saunders-8b38831a8/">
+						<FontAwesomeIcon className={styles.socialIcon} size="3x" icon={[ 'fab', 'linkedin' ]} />
+					</a>
+					<a href="mailto: daniel.saunders@mail.utoronto.ca">
+						<FontAwesomeIcon className={styles.socialIcon} size="3x" icon={[ 'fa', 'envelope' ]} />
+					</a>
 				</div>
 			</div>
 		</div>
