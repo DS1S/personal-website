@@ -1,14 +1,14 @@
 import styles from './Hero.module.css';
 import HeroBackground from './HeroBackground/HeroBackground';
 import { BigHead } from '@bigheads/core';
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Hero() {
+function Hero(props, ref) {
 	const [ swapAvatar, setSwapAvatar ] = useState(false);
 
 	return (
-		<div className={styles.heroContainer}>
+		<div ref={ref} className={styles.heroContainer}>
 			<HeroBackground />
 			<div className={styles.avatarContainer}>
 				<BigHead
@@ -58,3 +58,5 @@ export default function Hero() {
 		</div>
 	);
 }
+
+export default forwardRef(Hero);

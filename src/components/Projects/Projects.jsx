@@ -2,9 +2,10 @@ import ProjectCard from './ProjectCard/ProjectCard';
 import { projectsData } from './projectsData';
 import styles from './Projects.module.css';
 import { uid } from 'react-uid';
+import { forwardRef } from 'react';
 
 
-export default function Projects() {
+function Projects(props, ref) {
 
 	const bufferElements = []
 	for (let i = 0; i < (projectsData.length % 4); i++) {
@@ -12,7 +13,7 @@ export default function Projects() {
 	}
 
 	return (
-		<div className={styles.projectsContainer} id='projects'>
+		<div ref={ref} className={styles.projectsContainer} id='projects'>
 			<h2 className={`section-title ${styles.projectsText} ${styles.projectsTitle}`}>Projects</h2>
 			<p className={`${styles.projectsText} ${styles.projectsDescription}`}>
 				A currated list of notable projects I have worked most recently. Majority relate to full-stack web
@@ -27,3 +28,5 @@ export default function Projects() {
 		</div>
 	);
 }
+
+export default forwardRef(Projects);

@@ -1,3 +1,6 @@
+import { useRef } from 'react';
+import { useIntersection } from './hooks/useIntersection';
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -18,12 +21,23 @@ library.add(fab, faGithub, faLinkedin, faEnvelope);
 AOS.init({startEvent: 'load'});
 
 function App() {
+
+   const heroRef = useRef();
+   const experienceRef = useRef();
+   const projectsRef = useRef();
+
+   const heroVisible = useIntersection(heroRef, '-400px');
+   const experienceVisible = useIntersection(experienceRef, '-400px');
+   const projectsVisibile = useIntersection(projectsRef, '-400px');
+
+   console.log(experienceVisible)
+
 	return (
 		<div id='profile'>
-      <NavBar />
-      <Hero />
-      <Experience />
-      <Projects />
+      <NavBar visibilities={[heroVisible, experienceVisible, projectsVisibile]} />
+      <Hero ref={heroRef} />
+      <Experience ref={experienceRef}/>
+      <Projects ref={projectsRef}/>
 		</div>
 	);
 }

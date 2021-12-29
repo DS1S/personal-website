@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 import { uid } from 'react-uid';
 
 import Steps, { Step } from 'rc-steps';
@@ -44,7 +44,7 @@ const stepsData = {
 	}
 };
 
-export default function Experience() {
+function Experience(props, ref) {
 	const [ currentStep, setStep ] = useState(0);
 	const [ hasSlide, setHasSlide ] = useState(true);
 	const sliderRef = useRef(null);
@@ -71,7 +71,7 @@ export default function Experience() {
 	};
 
 	return (
-		<div className={styles.experienceContainer} id='experience'>
+		<div ref={ref}  className={styles.experienceContainer} id='experience'>
 			<h2 className="section-title">Intern Experience</h2>
 			<div
 				data-aos="fade-right"
@@ -114,3 +114,5 @@ export default function Experience() {
 		</div>
 	);
 }
+
+export default forwardRef(Experience);
