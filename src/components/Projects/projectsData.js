@@ -39,7 +39,7 @@ export const projectsData = [
         technologies: 'Python, FastAPI, GitHub Actions, Heroku',
         description: 'Covid API stores covid data uploaded and upon request can be used to synthesize the raw csv files previously provided. Utilizes design patterns and clean architecture to establish a robust API.',
         hasDemo: true,
-        demoLink: 'https://a2-covid-data-api.herokuapp.com/',
+        demoLink: 'https://a2-covid-data-api.herokuapp.com/docs',
         githubLink: ''
     },
     {
