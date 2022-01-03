@@ -1,0 +1,12 @@
+
+.footerContainer {
+    text-align: center;
+    background-color: var(--main-color);
+    padding: 1rem 0;
+}
+
+.footerMsg {
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}

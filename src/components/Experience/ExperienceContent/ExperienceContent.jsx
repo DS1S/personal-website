@@ -15,11 +15,13 @@ export default function ExperienceContent(props) {
 				</p>
 			</div>
 			<div>
-                <ul>
-                {props.contentBlocks.map((description, index) => (
-                    <li className={styles.descriptionBullet} key={uid(index + description)}>{description}</li>
-                ))}
-                </ul>
+				<ul>
+					{props.contentBlocks.map((description, index) => (
+						<li className={styles.descriptionBullet} key={uid(index + description)}>
+							{description}
+						</li>
+					))}
+				</ul>
 			</div>
 		</div>
 	);
